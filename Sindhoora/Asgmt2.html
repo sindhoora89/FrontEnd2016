@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    background-color:#999999;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    float:left;
+    width: 21%;
+    
+    display:block;
+}
+#nav a {
+    margin: 1px 2%;
+    padding-left: 5px;
+}
+#section {
+    width: 71%;
+    margin: 1px 2%;
+    display:block;
+    float:left;	 	 
+}
+#footer {
+    background-color:#999999;
+    color:white;
+    clear:both;
+    text-align:center;
+    	 	 
+}
+.clear {
+    clear: both;
+}
+.center{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<h1>Web Development</h1>
+</div>
+
+<div id="nav">
+    <nav><a href="#html5" onClick=showDiv("html5")>HTML5</a></nav>
+    <nav><a href="#css3" onClick=showDiv("css3")>CSS3</a></nav>
+    <nav><a href="#javaScript" onClick=showDiv("javaScript")>JavaScript</a></nav>
+    <nav><a href="#jquery" onClick=showDiv("jquery")>Jquery</a></nav>
+</div>
+
+<div id="section" >
+    <div id="web" class="content" style="display:block">
+        <h2>Learn Web Development</h2>
+        <p>As the internet has become a vital part of people's daily lives, web development has become one of the most in-demand skills. Companies today are looking for web developers to build and maintain websites to meet the wants and needs of their online customers.</p>
+    </div>
+    <div id="html5" class="content" style="display:none">
+        <h2>HTML5</h2>
+        <p>HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+    </div>
+    <div id="css3"  class="content" style="display:none">
+        <h2>CSS3</h2>
+			<p>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</p>
+    </div>
+    <div id="javaScript"  class="content" style="display:none">
+        <h2>JavaScript</h2>
+			<p>JavaScript is a lightweight, interpreted, programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments use it such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming styles. Read more about JavaScript.</p>
+    </div>
+    <div id="jquery"  class="content" style="display:none">
+        <h2>jQuery</h2>
+			<p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+    </div>
+</div>
+
+<div id="footer">
+<p>&copy; 2016</p>
+</div>
+
+</body>
+    <script type="text/javascript">
+
+    function showDiv(id) {
+    var inputs =    document.getElementsByClassName("content");
+for (var i = 0; i < inputs.length; i++) {
+    if(inputs[i].id !== id){
+         var e = document.getElementById(inputs[i].id);
+        e.style.display = 'none';
+    }
+    else {
+        var e = document.getElementById(id);
+        e.style.display = 'block';
+    }
+    }
+        
+}
+
+</script>
+</html>
